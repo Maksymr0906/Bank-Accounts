@@ -1,6 +1,6 @@
 #include "Savings_Account.hpp"
 
-Savings_Account::Savings_Account(std::string name = def_name, double balance = def_balance, double int_rate = def_int_rate) 
+Savings_Account::Savings_Account(std::string name, double balance, double int_rate) 
     :Account(name, balance), int_rate{int_rate} {
 }
 bool Savings_Account::deposit(double amount) {

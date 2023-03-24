@@ -1,6 +1,6 @@
 #include "Checking_Account.hpp"
 
-Checking_Account::Checking_Account(std::string name = def_name, double balance = def_balance)
+Checking_Account::Checking_Account(std::string name, double balance)
 :Account(name, balance) {
 }
 
@@ -10,5 +10,5 @@ std::ostream &operator<<(std::ostream &os, const Checking_Account &account) {
 }
 
 bool Checking_Account::withdraw(double amount) {
-    Account::withdraw(amount + 1.50);
+    return Account::withdraw(amount + per_check_fee);
 }
