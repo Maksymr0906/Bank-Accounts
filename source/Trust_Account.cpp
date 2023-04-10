@@ -1,10 +1,5 @@
 #include "Trust_Account.hpp"
 
-std::ostream &operator<<(std::ostream &os, const Trust_Account &account) {
-    os << "[Trust_Account: " << account.name << ": " << account.balance << ", " << account.int_rate << "%]";
-    return os;
-}
-
 Trust_Account::Trust_Account(std::string name, double balance, double int_rate) 
 :Savings_Account(name, balance, int_rate), withdrawal_per_year{0} {
 }
