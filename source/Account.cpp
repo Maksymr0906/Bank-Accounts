@@ -27,3 +27,7 @@ bool Account::withdraw(double amount) {
 double Account::get_balance() const {
     return balance;
 }
+
+void Account::print(std::ostream &os) const {
+    os << "[Account: " << name << ": " << balance << "]";
+}

@@ -9,5 +9,10 @@
 using namespace std;
 
 int main() {
-    vector<Account *> accounts;
+    vector<Account *> accounts{};
+    Account *acc = new Savings_Account("Maks", 1000);
+    accounts.push_back(acc);
+    display(accounts);
+    deposit(accounts, 1000);
+    withdraw(accounts, 2000);
 }
