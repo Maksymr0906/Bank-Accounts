@@ -1,17 +1,15 @@
 #include "Account_Util.hpp"
 
-//Utilities for Account
-
 void display(const std::vector<Account *> &accounts) {
     std::cout << "\n===== Accounts ==========" << std::endl;
-    for(const auto &acc: accounts) {
+    for(const auto acc: accounts) {
         std::cout << *acc << std::endl;
     }
 }
 
 void deposit(std::vector<Account *> &accounts, double amount) {
     std::cout << "\n===== Depositing to Accounts ==========" << std::endl;
-    for(auto &acc:accounts) {
+    for(auto acc:accounts) {
         if(acc->deposit(amount)) {
             std::cout << "Deposited " << amount << " to " << *acc << std::endl;
         }
@@ -21,7 +19,7 @@ void deposit(std::vector<Account *> &accounts, double amount) {
 
 void withdraw(std::vector<Account *> &accounts, double amount) {
     std::cout << "\n===== Withdrawing from Accounts ==========" << std::endl;
-    for(auto &acc: accounts) {
+    for(auto acc: accounts) {
         if(acc->withdraw(amount)) {
             std::cout << "Withdrew " << amount << " from " << *acc << std::endl;
         }
