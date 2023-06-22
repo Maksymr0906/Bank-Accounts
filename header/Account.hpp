@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include "I_Printable.hpp"
+#include "IllegalBalanceException.hpp"
+#include "InsufficientFundsException.hpp"
 class Account: public I_Printable {
 private:
     static constexpr const char *def_name  = "Unnamed Account";

@@ -9,10 +9,23 @@
 using namespace std;
 
 int main() {
-    vector<Account *> accounts{};
-    Account *acc = new Savings_Account("Maks", 1000);
-    accounts.push_back(acc);
-    display(accounts);
-    deposit(accounts, 1000);
-    withdraw(accounts, 2000);
+    try {
+        Savings_Account acc("Account", -12, 0.1);
+    }
+    catch(const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
+
+    try {
+        Savings_Account acc("Account_2", 100, 0.1);
+        std::cout << acc << std::endl;
+        acc.deposit(400);
+        std::cout << acc << std::endl;
+        acc.withdraw(600);
+    }
+    catch(const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
+    
+    
 }
